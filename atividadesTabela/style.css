@@ -3,9 +3,29 @@
   --azul-medio: #66C5E3;
   --azul-claro: #C7E7F3;
 }
+table {
+  background-color: var(--azul-escuro);
+  width: 600px;
+}
+th {
+  background-color: var(--azul-claro);
+}
 .celulaPrincipal {
   background-color: var(--azul-medio);
 }
-.posicao {}
-.cidade {}
-.populacao {}
+.posicao {
+  background-color: silver;
+}
+.cidade {
+  color: var(--azul-claro);
+  font-weight: bold;
+}
+.populacao, .celulaPrincipal, .posicao {
+  color: white;
+}
+.pos10 {
+  width: 10%;
+}
+.pop15 {
+  width: 15%;
+}
