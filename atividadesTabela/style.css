@@ -53,6 +53,7 @@ th {
 }
 
 .futebol .pos {
+  background-color: white;
   font-size: 18px;
   font-weight: bolder;
   text-align: center;
@@ -74,6 +75,14 @@ th {
   font-size: 14px;
   text-align: center;
   color: #666666;
+}
+
+.futebol .pos:first-child {
+  background-color: white;
+}
+
+.futebol .legenda td:first-child {
+  background-color: white;
 }
 
 .futebol td:nth-child(odd) {
