@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saldo com Desconto</title>
+  </head>
+  <body>
+    <input type="text" class="inA">
+    <input type="text" class="inB">
+    <input type="text" class="inC">
+    <br>
+    <span class="spA"></span><br>
+    <span class="spB"></span><br>
+    <span class="spC"></span><br>
+    <span class="spD"></span>
+
+    <button>Calcular as Médias</button>
+  
+    <script>
+      const btCalcular = document.querySelector("button")
+      btCalcular.addEventListener("click", () => {
+        const inA = document.querySelector(".inA")
+        const inB = document.querySelector(".inB")
+        const inC = document.querySelector(".inC")
+
+        const [numA, numB, numC] = 
+          [Number(inA.value), Number(inB.value), Number(inC.value)]
+
+        const mediaAR = (numA + numB + numC) / 3
+        const mediaPD = ((numA*3)+(numB*2)+(numC*5)) / 3
+        const mediaSM = mediaAR + mediaPD
+        const mediaMD = mediaSM / 2
+        
+        const spA = document.querySelector(".spA")
+        const spB = document.querySelector(".spB")
+        const spC = document.querySelector(".spC")
+        const spD = document.querySelector(".spD")
+
+        spA.textContent = mediaAR
+        spB.textContent = mediaPD
+        spC.textContent = mediaSM
+        spD.textContent = mediaMD
+      })
+    </script>
+  </body>
+</html>
