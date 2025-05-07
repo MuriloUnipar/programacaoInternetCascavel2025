@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saldo com Desconto</title>
+    <title>Numero Impar?</title>
   </head>
   <body>
+    <input type="text">
+    <br>
+    <span class="res"></span><br>
+
+    <button>É impar?</button>
   
-    <script src="script.js"></script>
+    <script>
+      const btCalcular = document.querySelector("button")
+      btCalcular.addEventListener("click", () => {
+        const inA = document.querySelector("input")
+
+        const res = document.querySelector(".res")
+        res.textContent = (Number(inA.value) % 2) === 0 ? "Não" : "Sim"
+      })
+    </script>
   </body>
 </html>
-

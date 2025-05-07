@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saldo com Desconto</title>
+    <title>Maior Numero</title>
   </head>
   <body>
+    <input type="text" class="inA">
+    <input type="text" class="inB">
+    <br>
+    <span class="res"></span><br>
+
+    <button>Quem é o maior?</button>
   
-    <script src="script.js"></script>
+    <script>
+      const btCalcular = document.querySelector("button")
+      btCalcular.addEventListener("click", () => {
+        const inA = document.querySelector(".inA")
+        const inB = document.querySelector(".inB")
+        const [valA, valB] = [Number(inA.value), Number(inB.value)]
+
+        const res = document.querySelector(".res")
+        res.textContent = (valA < valB) ? valB : valA
+      })
+    </script>
   </body>
 </html>
-

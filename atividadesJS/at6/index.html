@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saldo com Desconto</title>
+    <title>Menor Numero</title>
   </head>
   <body>
+    <input type="text" class="inA">
+    <input type="text" class="inB">
+    <input type="text" class="inC">
+    <input type="text" class="inD">
+    <br>
+    <span class="res"></span><br>
+
+    <button>Quem é o menor?</button>
   
-    <script src="script.js"></script>
+    <script>
+      const btCalcular = document.querySelector("button")
+      btCalcular.addEventListener("click", () => {
+        const inA = document.querySelector(".inA")
+        const inB = document.querySelector(".inB")
+        const inC = document.querySelector(".inC")
+        const inD = document.querySelector(".inD")
+        const valuesList = 
+          [Number(inA.value), Number(inB.value), Number(inC.value), Number(inD.value)]
+
+        const menor = Math.min(...valuesList)
+
+        const res = document.querySelector(".res")
+        res.textContent = menor
+      })
+    </script>
   </body>
 </html>
-
