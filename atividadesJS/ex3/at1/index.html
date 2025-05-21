@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terrenos</title>
+  </head>
+  <body>
+    <input type="text" class="i1">
+    <input type="text" class="i2">
+    <button>Calcular</button>
+    <span class="sp1"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const inputValue1 = Number(document.querySelector(".i1").value)
+        const inputValue2 = Number(document.querySelector(".i2").value)
+
+        const res = inputValue1 * inputValue2
+
+        const span1 = document.querySelector(".sp1")
+
+        span1.textContent = "Este terreno têm " + res + "m2"
+      })
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cavalos</title>
+  </head>
+  <body>
+    <input type="text" class="i1">
+    <button>Calcular</button>
+    <span class="sp1"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const inputValue1 = Number(document.querySelector("input").value)
+
+        const res = inputValue1 * 4 
+
+        const span1 = document.querySelector(".sp1")
+
+        span1.textContent = "Voce precisa de " + res + " ferraduras"
+      })
+    </script>
+  </body>
+</html>
+

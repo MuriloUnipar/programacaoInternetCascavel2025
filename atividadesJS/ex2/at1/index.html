@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dolar</title>
+  </head>
+  <body>
+    <input type="text">
+    <button>Calcular</button>
+    <span class="sp1"></span>
+    <span class="sp2"></span>
+    <span class="sp3"></span>
+    <span class="sp4"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const inputValue = Number(document.querySelector("input").value)
+
+        const val1 = (inputValue * 0.01) + inputValue
+        const val2 = (inputValue * 0.02) + inputValue
+        const val3 = (inputValue * 0.05) + inputValue
+        const val4 = (inputValue * 0.1) + inputValue
+
+        const span1 = document.querySelector(".sp1")
+        const span2 = document.querySelector(".sp2")
+        const span3 = document.querySelector(".sp3")
+        const span4 = document.querySelector(".sp4")
+
+        span1.textContent = val1 + " Valor mais 1%"
+        span2.textContent = val2 + " Valor mais 2%"
+        span3.textContent = val3 + " Valor mais 5%"
+        span4.textContent = val4 + " Valor mais 10%"
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza</title>
+  </head>
+  <body>
+    <input type="text" class="vl1">
+    <input type="text" class="vl2">
+    <input type="text" class="vl3">
+    <input type="text" class="vl4">
+    <input type="text" class="vlcoca">
+    <button>Finalizar Pedido</button>
+    <span class="res"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const value1 = document.querySelector(".vl1").value.trim()
+        const value2 = document.querySelector(".vl2").value.trim()
+        const value3 = document.querySelector(".vl3").value.trim()
+        const value4 = document.querySelector(".vl4").value.trim()
+        const valueCoca = Number(document.querySelector(".vlcoca").value)
+
+        const pizzaResults = [value1, value2, value3, value4].reduce((acc, curr) => {
+          console.log(curr)
+          if (curr !== "") return acc + 1
+          return acc
+        }, 0)
+
+        const total = (pizzaResults*12)+(valueCoca*7) 
+
+        const res = document.querySelector(".res")
+
+        res.textContent = `Valor a pagar: ${total}`
+      })
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operacoes</title>
+  </head>
+  <body>
+    <input type="text" class=".vl1">
+    <input type="text" class=".vl2">
+    <button>Calcular</button>
+    <span class="res"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const value1 = Number(document.querySelector(".vl1").value)
+        const value2 = Number(document.querySelector(".vl2").value)
+
+        const soma = value1 + value2
+        const sub = value1 - value2
+        const mult = value1 * value2
+        const div = value1 / value2
+
+        const res = document.querySelector(".res")
+
+        res.textContent = `soma: ${soma} subtracao: ${sub} multiplicacao: ${mult} divisao: ${div}`
+      })
+    </script>
+  </body>
+</html>

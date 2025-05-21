@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOTpao</title>
+  </head>
+  <body>
+    <input type="text" class="i1">
+    <input type="text" class="i2">
+    <button>Calcular</button>
+    <span class="sp1"></span>
+
+    <script>
+      const button = document.querySelector("button")
+
+      button.addEventListener("click", () => {
+        const inputValue1 = Number(document.querySelector("input").value)
+        const inputValue2 = Number(document.querySelector("input").value)
+
+        const paes = inputValue1 * 0.12 
+        const broas = inputValue2 * 1.5 
+        const guardar = (paes + broas)*0.1
+
+        const res = `Voce lucrou no total ${paes+broas} e deve guardar ${guardar.toFixed(3)}`
+
+        const span1 = document.querySelector(".sp1")
+
+        span1.textContent = res
+      })
+    </script>
+  </body>
+</html>
+
